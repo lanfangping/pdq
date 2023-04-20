@@ -37,8 +37,8 @@ public class SqlAccessMethodTestPostgres {
 		Properties properties = new Properties();
 		properties.setProperty("url", "jdbc:postgresql://localhost:5432/");
 		properties.setProperty("database", "tpch");
-		properties.setProperty("username", "admin");
-		properties.setProperty("password", "admin");
+		properties.setProperty("username", "postgres");
+		properties.setProperty("password", "postgres");
 		return(properties);
 	}
 

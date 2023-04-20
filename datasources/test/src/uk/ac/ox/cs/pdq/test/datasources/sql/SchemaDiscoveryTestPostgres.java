@@ -83,9 +83,9 @@ public class SchemaDiscoveryTestPostgres extends PdqTest {
 		Properties properties = new Properties();
 		properties.put("url", "jdbc:postgresql://localhost/");
 		properties.put("database", "tpch");
-		properties.put("username", "root");
 		properties.put("username", "postgres");
-		properties.put("password", "root");
+		properties.put("username", "postgres");
+		properties.put("password", "postgres");
 		properties.put("driver","org.postgresql.Driver");		
 		int i = 0;
 		for(String n: this.relationNames) {
@@ -126,9 +126,9 @@ public class SchemaDiscoveryTestPostgres extends PdqTest {
 		Properties properties = new Properties();
 		properties.put("url", "jdbc:postgresql://localhost/");
 		properties.put("database", "tpch");
-		properties.put("username", "root");
 		properties.put("username", "postgres");
-		properties.put("password", "root");
+		properties.put("username", "postgres");
+		properties.put("password", "postgres");
 		properties.put("driver","org.postgresql.Driver");		
 		int i = 0;
 		for(String n: this.relationNames) {
@@ -167,9 +167,9 @@ public class SchemaDiscoveryTestPostgres extends PdqTest {
 		Properties properties = new Properties();
 		properties.put("url", "jdbc:postgresql://localhost/");
 		properties.put("database", "tpch");
-		properties.put("username", "root");
+//		properties.put("username", "postgres");
 		properties.put("username", "postgres");
-		properties.put("password", "root");
+		properties.put("password", "postgres");
 		properties.put("driver","org.postgresql.Driver");		
 		int i = 0;
 		for(String n: this.relationNames) {
@@ -207,8 +207,8 @@ public class SchemaDiscoveryTestPostgres extends PdqTest {
 		Properties properties = new Properties();
 		properties.put("url", "jdbc:postgresql://localhost/");
 		properties.put("database", "tpch_0001");
-		properties.put("username", "root");
-		properties.put("password", "root");
+		properties.put("username", "postgres");
+		properties.put("password", "postgres");
 		Map<String, Relation> map = new LinkedHashMap<>();
 		map.put("customer", Relation.create("customer", this.makeAttributes(this.attributesNames[0])));
 		map.put("lineitem", Relation.create("lineitem", this.makeAttributes(this.attributesNames[1])));

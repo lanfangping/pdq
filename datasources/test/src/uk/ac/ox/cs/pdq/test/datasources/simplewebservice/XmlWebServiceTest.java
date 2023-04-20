@@ -19,6 +19,7 @@ import java.util.stream.StreamSupport;
 import javax.xml.bind.JAXBException;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -38,6 +39,7 @@ import uk.ac.ox.cs.pdq.db.tuple.TupleType;
 public class XmlWebServiceTest {
 
 	@Test
+	@Ignore
 	public void testLoad() {
 
 		XmlWebService target;

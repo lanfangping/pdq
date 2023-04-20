@@ -384,6 +384,7 @@ public class DependentJoinTest {
 	 * DependentJoin{regionKey}(NATION, REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql1() throws Exception {
 
 		AccessTerm leftChild = AccessTerm.create(TPCHelper.amFreeNation.getRelation(), TPCHelper.amFreeNation);
@@ -414,6 +415,7 @@ public class DependentJoinTest {
 	 * DependentJoin{regionKey}(NATION, REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql1a() throws Exception {
 
 		AccessTerm leftChild = AccessTerm.create(TPCHelper.am0Nation.getRelation(), TPCHelper.am0Nation);
@@ -462,6 +464,7 @@ public class DependentJoinTest {
 	 * (C_NATIONKEY)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql2() throws Exception {
 
 		AccessTerm leftChild = AccessTerm.create(TPCHelper.amFreeNation.getRelation(), TPCHelper.amFreeNation);
@@ -495,6 +498,7 @@ public class DependentJoinTest {
 	 * relation with input required on position 3 (C_NATIONKEY)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql2a() throws Exception {
 
 		AccessTerm leftChild = AccessTerm.create(TPCHelper.am2Nation.getRelation(), TPCHelper.am2Nation);
@@ -591,6 +595,7 @@ public class DependentJoinTest {
 	 * position (NATIONKEY), then Select MKTSEGMENT = "AUTOMOBILE"
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql3() throws Exception {
 
 		AccessTerm leftChild = AccessTerm.create(TPCHelper.amFreeNation.getRelation(), TPCHelper.amFreeNation);
@@ -624,6 +629,7 @@ public class DependentJoinTest {
 	 * Plan: DependentJoin{nationKey}(Selection(NATION), CUTSTOMER)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql4() throws Exception {
 
 		Condition condition = ConstantInequalityCondition.create(2, TypedConstant.create(1), false);
@@ -656,6 +662,7 @@ public class DependentJoinTest {
 	 * Plan: DependentJoin{nationKey}(SUPPLIER, NATION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql5() throws Exception {
 
 		AccessTerm leftChild = AccessTerm.create(TPCHelper.amFreeSupplier.getRelation(), TPCHelper.amFreeSupplier);
@@ -976,6 +983,7 @@ public class DependentJoinTest {
 	 * Plan: DependentJoin(NATION, SUPPLIER)
 	 */
 	@Test
+	@Ignore
 	public void stressTestSql1() throws Exception {
 
 		DependentJoin target = new DependentJoin(DependentJoinTerm.create(

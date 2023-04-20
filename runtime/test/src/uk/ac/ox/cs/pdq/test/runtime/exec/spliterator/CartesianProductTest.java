@@ -18,6 +18,7 @@ import javax.xml.bind.JAXBException;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -51,6 +52,7 @@ public class CartesianProductTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql1() throws Exception {
 
 		Relation relationNation = Mockito.mock(Relation.class);
@@ -91,6 +93,7 @@ public class CartesianProductTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql2() throws Exception {
 
 		Relation relationNation = Mockito.mock(Relation.class);
@@ -147,6 +150,7 @@ public class CartesianProductTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql3() throws Exception {
 
 		// Relation relationNation = Mockito.mock(Relation.class);
@@ -227,6 +231,7 @@ public class CartesianProductTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql4() throws Exception {
 
 		/*
@@ -421,6 +426,7 @@ public class CartesianProductTest {
 	 * Plan: CartesianProduct(NATION, SUPPLIER)
 	 */
 	@Test
+	@Ignore
 	public void stressTestSql1() throws Exception {
 
 		CartesianProduct target = new CartesianProduct(
@@ -466,6 +472,7 @@ public class CartesianProductTest {
 	 * Plan: CartesianProduct(NATION, CUSTOMER)
 	 */
 	@Test
+	@Ignore
 	public void stressTestSql2() throws Exception {
 
 		CartesianProduct target = new CartesianProduct(

@@ -46,7 +46,7 @@ import uk.ac.ox.cs.pdq.io.jaxb.adapted.AdaptedRelation;
 "uk.ac.ox.cs.pdq.sql.PostgresqlSchemaDiscoverer" 
  * 		driver="org.postgresql.Driver" 
  * 		url="jdbc:postgresql://localhost/" 
- * 		database="tpch_0001" username="root" password="root" />
+ * 		database="tpch_0001" username="postgres" password="postgres" />
  * </code>
  * 
  * @author Gabor

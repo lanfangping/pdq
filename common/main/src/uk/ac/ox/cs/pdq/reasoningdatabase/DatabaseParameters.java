@@ -86,7 +86,7 @@ public class DatabaseParameters extends Parameters {
 		dbParam.setDatabaseDriver("org.postgresql.Driver");
 		dbParam.setDatabaseName("pdq");
 		dbParam.setDatabaseUser("postgres");
-		dbParam.setDatabasePassword("root");
+		dbParam.setDatabasePassword("postgres");
 		dbParam.setNumberOfThreads(DEFAULT_NUMBER_OF_THREADS);
 		return dbParam; 
 	}
@@ -98,8 +98,8 @@ public class DatabaseParameters extends Parameters {
 		dbParam.setDatabaseName("pdq");
 		dbParam.setDatabaseName("PDQ");
 		dbParam.setDatabaseUser("pdq");
-		dbParam.setDatabasePassword("root");
-		dbParam.setDatabaseUser("gabor");
+		dbParam.setDatabasePassword("postgres");
+		dbParam.setDatabaseUser("postgres");
 		dbParam.setDatabasePassword("");
 		dbParam.setNumberOfThreads(DEFAULT_NUMBER_OF_THREADS);
 		return dbParam; 
@@ -130,7 +130,7 @@ public class DatabaseParameters extends Parameters {
 			this.setDatabaseUser("postgres");
 		}
 		if (this.getDatabasePassword() == null && !this.getUseInternalDatabaseManager()) {
-			this.setDatabasePassword("root");
+			this.setDatabasePassword("postgres");
 		}
 		if (this.getNumberOfThreads() == 0 && !this.getUseInternalDatabaseManager()) {
 			this.setNumberOfThreads(DEFAULT_NUMBER_OF_THREADS);

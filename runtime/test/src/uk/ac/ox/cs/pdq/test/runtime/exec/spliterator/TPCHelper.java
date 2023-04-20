@@ -26,7 +26,7 @@ public class TPCHelper {
 //		properties.setProperty("username", "admin");
 //		properties.setProperty("password", "admin");
 		properties.setProperty("username", "postgres");
-		properties.setProperty("password", "root");
+		properties.setProperty("password", "postgres");
 		return(properties);
 	}
 

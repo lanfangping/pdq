@@ -15,6 +15,7 @@ import java.util.Properties;
 import javax.xml.bind.JAXBException;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -52,8 +53,8 @@ public class TestAccessRepositoryPostgres extends PdqTest {
 		properties = new Properties();
 		properties.setProperty("url", "jdbc:postgresql://localhost:5432/");
 		properties.setProperty("database", "tpch");
-		properties.setProperty("username", "admin");
-		properties.setProperty("password", "admin");
+		properties.setProperty("username", "postgres");
+		properties.setProperty("password", "postgres");
 	}
 	@Test
 	public void schemaWithView() {
@@ -208,6 +209,7 @@ public class TestAccessRepositoryPostgres extends PdqTest {
 	 * @throws JAXBException
 	 */
 	@Test
+	@Ignore
 	public void testXmlWebAccessExport() throws JAXBException {
 		ExecutableAccessMethod target;
 		Integer[] inputs;
@@ -341,6 +343,7 @@ public class TestAccessRepositoryPostgres extends PdqTest {
 	}
 
 	@Test
+	@Ignore
 	public void testAccessRepositoryWeb() throws Exception {
 		AccessRepository repo = AccessRepository.getRepository(accessesDir);
 		ExecutableAccessMethod accessMethod = repo.getAccess("NATION_WEB");

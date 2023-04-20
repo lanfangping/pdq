@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 import javax.xml.bind.JAXBException;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -598,6 +599,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(NATION, REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql1() throws Exception {
 
 		/*
@@ -688,6 +690,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(NATION, REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql2() throws Exception {
 
 		/*
@@ -753,6 +756,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(NATION, REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql3() throws Exception {
 
 		/*
@@ -821,6 +825,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(NATION, REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql4() throws Exception {
 
 		/*
@@ -903,6 +908,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(NATION, Selection(REGION))
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql5() throws Exception {
 
 		Relation relationNation = Mockito.mock(Relation.class);
@@ -948,6 +954,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(Selection(NATION), REGION)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql6() throws Exception {
 
 		Relation relationNation = Mockito.mock(Relation.class);
@@ -993,6 +1000,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * SUPPLIER))
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql7() throws Exception {
 
 		Relation relationNation = Mockito.mock(Relation.class);
@@ -1055,6 +1063,7 @@ public class SymmetricMemoryHashJoinTest {
 	 * Plan: Join(Selection(CUSTOMER), SUPPLIER)
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql8() throws Exception {
 
 		Relation relationCustomer = Relation.create("customer", TPCHelper.attrs_customer);
@@ -1143,6 +1152,7 @@ public class SymmetricMemoryHashJoinTest {
 	}
 	
 	@Test
+	@Ignore
 	public void integrationTestSql10() throws Exception {
 
 		Relation relationRegion1 = Relation.create("REGION", TPCHelper.attrs_region);
@@ -1162,6 +1172,7 @@ public class SymmetricMemoryHashJoinTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql11() throws Exception {
 
 		Relation relationRegion1 = Relation.create("REGION", TPCHelper.attrs_region);

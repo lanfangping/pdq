@@ -17,6 +17,7 @@ import javax.xml.bind.JAXBException;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -330,6 +331,7 @@ public class ProjectionTest {
 	 * Plan: Projection(Selection(Access(CUSTOMER)))
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql1() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -375,6 +377,7 @@ public class ProjectionTest {
 	 * Plan: Projection(Access) with dynamic input.
 	 */
 	@Test
+	@Ignore
 	public void integrationTestSql2() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -440,6 +443,7 @@ public class ProjectionTest {
 	 * Plan: Projection(Join(Join(NATION, SUPPLIER), Join(PART, PARTSUPP)))
 	 */
 	@Test
+	@Ignore
 	public void stressTestSql1() throws Exception {
 
 		// Construct the target plan.

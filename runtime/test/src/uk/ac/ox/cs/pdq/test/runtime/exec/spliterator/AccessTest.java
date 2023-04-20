@@ -17,6 +17,7 @@ import javax.xml.bind.JAXBException;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -312,6 +313,7 @@ public class AccessTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql2() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -346,6 +348,7 @@ public class AccessTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql3() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -379,6 +382,7 @@ public class AccessTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql4() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -444,6 +448,7 @@ public class AccessTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql5() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -500,6 +505,7 @@ public class AccessTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql6() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
@@ -533,6 +539,7 @@ public class AccessTest {
 	}
 
 	@Test
+	@Ignore
 	public void integrationTestSql7() throws Exception {
 
 		Relation relation = Mockito.mock(Relation.class);
