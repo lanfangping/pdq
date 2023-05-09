@@ -19,6 +19,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.log4j.Logger;
+import org.checkerframework.checker.signature.qual.BinaryNameInUnnamedPackage;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
@@ -654,6 +655,7 @@ public class DatabaseChaseInstance implements ChaseInstance {
 					inequalities.add(Pair.of((Variable)source.getHead().getTerms()[2*i],(Variable)source.getHead().getTerms()[2*i+1]));
 			}
 			leftQuery = ConjunctiveQueryWithInequality.create(freeVariables.toArray(new Variable[freeVariables.size()]), source.getBodyAtoms(),inequalities);
+			System.out.println("leftquery: "+leftQuery.toString());
 			if (triggerProperty == TriggerProperty.ALL) {
 				try {
 					results.addAll(replaceFormulaInMatches(source, databaseInstance.answerConjunctiveQuery(leftQuery)));
@@ -668,6 +670,7 @@ public class DatabaseChaseInstance implements ChaseInstance {
 				rightQueryAtoms.addAll(Arrays.asList(source.getHeadAtoms()));
 				rightQuery = ConjunctiveQueryWithInequality.create(freeVariables.toArray(new Variable[freeVariables.size()]),
 						rightQueryAtoms.toArray(new Atom[rightQueryAtoms.size()]),inequalities);
+				System.out.println("right query:"+rightQuery.toString());
 				try {
 					List<Match> queryResults = databaseInstance.answerQueryDifferences(leftQuery, rightQuery);
 					results.addAll(replaceFormulaInMatches(source, queryResults));

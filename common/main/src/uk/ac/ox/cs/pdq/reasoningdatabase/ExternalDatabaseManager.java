@@ -300,6 +300,7 @@ public class ExternalDatabaseManager implements DatabaseManager {
 			new Exception("Warning, database manager is shutting down, but the database is not dropped yet.")
 					.printStackTrace();
 		}
+		System.out.println("shutdown");
 		executor.shutdown();
 		DatabaseMonitor.unRegister(this);
 	}

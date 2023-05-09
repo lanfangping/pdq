@@ -30,7 +30,7 @@ import uk.ac.ox.cs.pdq.test.util.PdqTest;
  *
  */
 public class TestSqlCommands extends PdqTest {
-	private final String databaseNameKeyWord = "databaseNameKeyWord";
+	private final String databaseNameKeyWord = "pdq";
 	/**
 	 * <pre>
 	 * Schema has 3 relations : R0(a,b,c) where a,b,c are integer attributes, with a
@@ -51,6 +51,7 @@ public class TestSqlCommands extends PdqTest {
 		
 		Assert.assertEquals(sc.getQuery(), bs.getFormula());
 		Assert.assertEquals(Arrays.asList(sc.getQuery().getFreeVariables()), Arrays.asList(bs.getResultTerms()));
+		
 		Assert.assertTrue(bs.toPostgresStatement("123").size()==1);
 		Assert.assertTrue(bs.toPostgresStatement("123").get(0).length()>50);
 	
@@ -125,9 +126,9 @@ public class TestSqlCommands extends PdqTest {
 		BasicSelect bs = new BasicSelect(sc.getSchema(),sc.getQuery());
 		
 		DifferenceQuery dq = new DifferenceQuery(bs,bs,sc.getSchema());
-		
 		Assert.assertEquals(sc.getQuery(), dq.getFormula());
 		Assert.assertEquals(Arrays.asList(sc.getQuery().getFreeVariables()), Arrays.asList(dq.getResultTerms()));
+		System.out.println(dq.toPostgresStatement("123").get(0));
 		Assert.assertTrue(dq.toPostgresStatement("123").size()==1);
 		Assert.assertTrue(dq.toPostgresStatement("123").get(0).length()>50);
 	}

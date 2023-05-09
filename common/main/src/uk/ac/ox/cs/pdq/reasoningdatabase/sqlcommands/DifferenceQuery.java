@@ -82,7 +82,10 @@ public class DifferenceQuery extends BasicSelect {
 
 		// same with the table names, but here we have to pay attention to the aliases.
 		List<String> differentTableNames = new ArrayList<String>(right.fromTableNameNoAliases);
+		System.out.println(differentTableNames);
+		System.out.println("left"+left.fromTableNameNoAliases);
 		differentTableNames.removeAll(left.fromTableNameNoAliases);
+		System.out.println(differentTableNames);
 
 		// we need to map from the table name to the the table's alias name.
 		List<String> nestedQueryTableNames = new ArrayList<String>();
@@ -111,14 +114,14 @@ public class DifferenceQuery extends BasicSelect {
 		}
 		// Nested select part
 		sqlQueryString += " NOT EXISTS ( SELECT " + Joiner.on(",").join(left.select) + " FROM " + Joiner.on(",").join(nestedQueryTableNames);
-
+		
 		// add the where conditions if there are any, and close the nested select
 		if (differentConditions.isEmpty()) {
 			sqlQueryString += ")";
 		} else {
 			sqlQueryString += " WHERE " + Joiner.on(" AND ").join(differentConditions) + " )";
 		}
-
+		System.out.println(sqlQueryString);
 		// store the prepared statement string.
 		this.statements.add(sqlQueryString);
 		// store the mapping aliases. We can use the aliases prepared by the left and

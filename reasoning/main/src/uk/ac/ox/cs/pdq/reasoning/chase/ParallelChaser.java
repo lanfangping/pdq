@@ -3,7 +3,17 @@
 
 package uk.ac.ox.cs.pdq.reasoning.chase;
 
+import static org.mockito.ArgumentMatchers.intThat;
+
+import java.awt.print.Printable;
+import java.util.Iterator;
 import java.util.List;
+
+import javax.management.MBeanOperationInfo;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
+
+import org.checkerframework.checker.signature.qual.BinaryNameInUnnamedPackage;
+import org.checkerframework.checker.units.qual.m;
 
 import com.google.common.base.Preconditions;
 
@@ -52,6 +62,14 @@ public class ParallelChaser extends Chaser {
 			appliedStep = false;
 			for(Dependency dependency:d) {
 				List<Match> matches = instance.getTriggers(new Dependency[]{dependency}, TriggerProperty.ACTIVE);
+				
+				// check matches
+				Iterator<Match> matchIterable = matches.iterator();
+				while (matchIterable.hasNext()) {
+					Match m = matchIterable.next();
+					System.out.println("substitution: "+m.toString() + "\n");
+				}
+				
 				if(!matches.isEmpty()) {
 					boolean success = instance.chaseStep(matches);
 					if (success) {

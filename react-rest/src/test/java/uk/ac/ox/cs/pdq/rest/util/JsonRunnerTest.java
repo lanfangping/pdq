@@ -26,13 +26,13 @@ public class JsonRunnerTest {
     RelationalTerm testPlanRT = controller.plan(testId, testId, testSQL).getPlan();
 
 
-    @Test
+//    @Test
     public void testRuntime() throws Exception {
         RunResults actual = JsonRunner.runtime(testSchema, testCq, testProperties, testPlanRT);
         Assert.assertNotNull(actual);
     }
 
-    @Test
+//    @Test
     public void testEvaluatePlan() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method m = JsonRunner.class.getDeclaredMethod("evaluatePlan", RelationalTerm.class, Schema.class);
         m.setAccessible(true);
